@@ -23,8 +23,8 @@ const data = [
 ]
 const Home = () => {
 
-    const API = "http://localhost:4000/api/checkout";
-    const API_KEY = "http://localhost:4000/api/apiKey";
+    const API = "https://razorpayserver-neno.onrender.com/api/checkout";
+    const API_KEY = "https://razorpayserver-neno.onrender.com/api/apiKey";
 
     const buyNowHandler = async (amount) => {
         const { data:{key} } = await axios.get(API_KEY);
@@ -40,7 +40,7 @@ const Home = () => {
     description: "Test Transaction",
     image: "https://example.com/your_logo",
     order_id: order.id, 
-    callback_url: "http://localhost:4000/api/paymentVerification",
+    callback_url: "https://razorpayserver-neno.onrender.com/api/paymentVerification",
     prefill: {
         "name": "Demo User",
         "email": "demo.user@example.com",
